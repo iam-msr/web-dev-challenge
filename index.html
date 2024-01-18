@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fyle Challenge</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="total-body mt-5">
+    <h2>Fyle Web Development Challenge</h2>
+
+
+    <div class="form-group">
+      <label for="username">Enter GitHub Username:</label>
+      <input type="text" class="form-control" id="username" placeholder="Ex. johnpapa" autocomplete="on">
+    </div>
+
+    <div>
+      <button class="btn btn-primary" onclick="getInfo()">Get Repositories</button>
+    </div>
+
+    <div>
+      
+
+      <!--User Details will be displayed here-->
+      <div id="userDetails" class="mt-5"></div>
+    </div>
+
+
+    <div class="form-group" id="perPageFormGroup">
+      <label for="perPageSelect">Repositories per page: </label>
+      <select id="perPageSelect" onchange="changePerPage()">
+        <option value="10">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="70">70</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+
+
+
+    <div>
+      
+
+      <!--Repositories will be displayed here -->
+      <div id="repoList" class="mt-3"></div>
+    </div>
+
+
+
+
+    <!--Pagination (numbers) will be displayed here -->
+    <div class="pagination" id="paginationPage">
+      <nav aria-label="Page navigation">
+        <ul class="pagination mt-3" id="pagination"></ul>
+      </nav>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
