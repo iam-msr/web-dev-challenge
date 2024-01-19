@@ -17,7 +17,7 @@
 
     <div class="form-group">
       <label for="username">Enter GitHub Username:</label>
-      <input type="text" class="form-control" id="username" placeholder="Ex. johnpapa" autocomplete="on">
+      <input type="text" class="form-control" id="username" placeholder="Ex. johnpapa" autocomplete="off">
     </div>
 
     <div>
@@ -25,7 +25,8 @@
     </div>
 
     <div>
-      
+      <!--To display skeleton,loaders when API calls are in progress-->
+      <div id="UserLoader" class="loader mt-5"></div>
 
       <!--User Details will be displayed here-->
       <div id="userDetails" class="mt-5"></div>
@@ -46,7 +47,8 @@
 
 
     <div>
-      
+      <!--To display skeleton,loaders when API calls are in progress-->
+      <div id="RepoLoader" class="loader mt-5"></div>
 
       <!--Repositories will be displayed here -->
       <div id="repoList" class="mt-3"></div>

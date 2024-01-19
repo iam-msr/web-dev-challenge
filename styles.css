@@ -1,0 +1,49 @@
+.total-body{
+    margin-inline: 1%;
+  }
+  .profile-img{
+      width: 60%;
+    }
+    
+    .user-details{
+      border: 1px solid #e5e5e5;
+    }
+    
+  .Name{
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+  }
+  
+  .Desc{
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+  }
+  
+  #repoList{
+    display: flex;
+    margin-inline: 25px;
+  }
+  
+  #userDetails{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #e5e5e5;
+    width: max-content;
+    margin: auto;
+    /* padding: 15px; */
+    flex-wrap: wrap;
+    background-color: #F3F4F6;
+    border-radius: 10px;
+    /* padding-inline: 25px; */
+  }
+  #perPageFormGroup{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  
+  #userDetails img{
+    border-radius: 130px;
+    margin-right: 20px;
+    margin: 25px;
+  }
