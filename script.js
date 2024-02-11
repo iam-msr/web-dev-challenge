@@ -214,13 +214,21 @@ function updatePagination() {
   })">Previous</a>`;
   paginationElement.appendChild(prevLi);
 
-  // Numbered pages
-  for (let i = 1; i <= totalPages; i++) {
-    const li = document.createElement("li");
-    li.className = `page-item ${i === currentPage ? "active" : ""}`;
-    li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${i})">${i}</a>`;
-    paginationElement.appendChild(li);
-  }
+  // // Numbered pages
+  // for (let i = 1; i <= totalPages; i++) {
+  //   const li = document.createElement("li");
+  //   li.className = `page-item ${i === currentPage ? "active" : ""}`;
+  //   li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${i})">${i}</a>`;
+  //   paginationElement.appendChild(li);
+  // }
+
+  // Display current page and total pages
+  const pageDetails = document.createElement("li");
+  pageDetails.className = "page-item disabled";
+  pageDetails.innerHTML = `<a class="page-link">Page ${currentPage} of ${totalPages}</a>`;
+  paginationElement.appendChild(pageDetails);
+
+  
 
   // Next button
   const nextLi = document.createElement("li");
